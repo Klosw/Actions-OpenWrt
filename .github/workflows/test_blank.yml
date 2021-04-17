@@ -28,7 +28,7 @@ jobs:
       
        # shezhi变量
        - name: bianliang
-       - run: echo "mypath" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+         run: echo "mypath" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
       
       # Runs a single command using the runners shell
       - name: Run a one-line script
