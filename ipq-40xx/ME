@@ -1,0 +1,4 @@
+# 禁用 IPV6
+cat >> .config <<EOF
+# CONFIG_IPV6 is not set
+EOF
