@@ -40,16 +40,21 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project. 
       # Runs Test    
-      - name: Run a Test
+      - name: Run a Test K
         id: step_two
         run: |
            echo "aa=yellow" >> $GITHUB_ENV 
-           echo "啥呀 _${{ env.aa }}"
-           echo "bb=${{ env.aa }}" >> $GITHUB_ENV 
-           echo "啥哇  _${{ env.bb }}"
+          
+         
+      - name: Run a Test V
+        run: |
+             echo "啥呀 _${{ env.aa }}"
+             echo "bb=${{ env.aa }}" >> $GITHUB_ENV 
+            
       - name: Set the value
         id: step_one
         run: |
+            echo "啥哇  _${{ env.bb }}"
             echo 'JSON_RESPONSE<<EOF' >> $GITHUB_ENV
             curl https://httpbin.org/json >> $GITHUB_ENV
             echo 'EOF' >> $GITHUB_ENV     
