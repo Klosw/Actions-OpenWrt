@@ -15,6 +15,7 @@ cat >> .config <<EOF
 CONFIG_IPV6=y
 EOF
 
+
 #先去掉这些 添加这是会导致lan没有网络 不知道什么原因
 #ip6tables-mod-nat
 #CONFIG_KERNEL_IPV6=m
@@ -25,7 +26,7 @@ EOF
 #CONFIG_BUSYBOX_DEFAULT_FEATURE_IPV6=m
 #CONFIG_PACKAGE_luci-proto-ipv6=m
 #CONFIG_PACKAGE_odhcpd-ipv6only=m
-#CONFIG_DEFAULT_odhcp6c=m
+#CONFIG_PACKAGE_odhcp6c=m
 #CONFIG_PACKAGE_kmod-ipt-nat6=m
 
 
