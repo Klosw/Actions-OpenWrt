@@ -10,10 +10,20 @@ CONFIG_TARGET_ipq40xx=y
 CONFIG_TARGET_ipq40xx_DEVICE_hiwifi_c526a=y
 EOF
 
-# 禁用 IPV6
-#cat >> .config <<EOF
-# CONFIG_IPV6 is not set
-#EOF
+# 启用 IPV6
+cat >> .config <<EOF
+CONFIG_DEFAULT_odhcpd-ipv6only=y
+CONFIG_KERNEL_IPV6=y
+CONFIG_KERNEL_IPV6_MULTIPLE_TABLES=y
+CONFIG_KERNEL_IPV6_SUBTREES=y
+CONFIG_KERNEL_IPV6_MROUTE=y
+CONFIG_IPV6=y
+CONFIG_PACKAGE_kmod-nf-ipt6=y
+CONFIG_BUSYBOX_DEFAULT_FEATURE_IPV6=y
+CONFIG_PACKAGE_luci-proto-ipv6=y
+CONFIG_PACKAGE_odhcpd-ipv6only=y
+
+EOF
 
 # 取消默认启用的包
 cat >> .config <<EOF
@@ -61,13 +71,16 @@ CONFIG_PACKAGE_ffprobe=y
 EOF
 
 cat >> .config <<EOF
-CONFIG_PACKAGE_luci-app-openclash=y
+CONFIG_PACKAGE_luci-app-openclash=m
 CONFIG_PACKAGE_luci-app-vssr=y
-CONFIG_PACKAGE_luci-app-vlmcsd=y
+CONFIG_PACKAGE_luci-app-vlmcsd=m
 CONFIG_PACKAGE_luci-app-qosv4=y
-
 EOF
 
+cat >> .config <<EOF
+CONFIG_PACKAGE_luci-app-samba=m
+CONFIG_PACKAGE_autosamba=m
+EOF
 # 常用软件 默认已启用
 #cat >> .config <<EOF
 #CONFIG_PACKAGE_luci=y
