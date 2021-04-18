@@ -48,13 +48,13 @@ jobs:
          
       - name: Run a Test V
         run: |
-             echo "啥呀 _${{ env.aa }}"
-             echo "bb=${{ env.aa }}" >> $GITHUB_ENV 
+             echo "aa= ${{ env.aa }}"
+             echo "bb=我是B_${{ env.aa }}" >> $GITHUB_ENV 
             
       - name: Set the value
         id: step_one
         run: |
-            echo "啥哇  _${{ env.bb }}"
+            echo "bb = ${{ env.bb }}"
             echo 'JSON_RESPONSE<<EOF' >> $GITHUB_ENV
             curl https://httpbin.org/json >> $GITHUB_ENV
             echo 'EOF' >> $GITHUB_ENV     
