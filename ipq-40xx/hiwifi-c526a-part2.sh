@@ -16,6 +16,7 @@ CONFIG_IPV6=y
 EOF
 
 #先去掉这些 添加这是会导致lan没有网络 不知道什么原因
+#ip6tables-mod-nat
 #CONFIG_KERNEL_IPV6=m
 #CONFIG_KERNEL_IPV6_MULTIPLE_TABLES=m
 #CONFIG_KERNEL_IPV6_SUBTREES=m
