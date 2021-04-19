@@ -50,6 +50,7 @@ jobs:
         run: |
              echo "aa= ${{ env.aa }}"
              echo "bb=我是B_${{ env.aa }}" >> $GITHUB_ENV 
+             cat /proc/cpuinfo |grep "processor"|wc -l
             
       - name: Set the value
         id: step_one
