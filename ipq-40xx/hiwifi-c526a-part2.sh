@@ -11,17 +11,17 @@ CONFIG_TARGET_ipq40xx_DEVICE_hiwifi_c526a=y
 EOF
 
 # 启用 IPV6 提示缺少nat然后没有网络
-cat >> .config <<EOF 
-CONFIG_IPV6=y
-CONFIG_PACKAGE_ip6tables=y
-CONFIG_PACKAGE_kmod_ip6tables=y
-CONFIG_PACKAGE_kmod-ipt-nat6=y
-CONFIG_PACKAGE_luci-proto-ipv6=y
-CONFIG_PACKAGE_ip6tables-mod-nat=y
-CONFIG_PACKAGE_kmod-nf-ipt6=y
-CONFIG_PACKAGE_odhcp6c=y
-CONFIG_PACKAGE_odhcpd-ipv6only=y
-EOF
+#cat >> .config <<EOF 
+#CONFIG_IPV6=y
+#CONFIG_PACKAGE_ip6tables=y
+#CONFIG_PACKAGE_kmod_ip6tables=y
+#CONFIG_PACKAGE_kmod-ipt-nat6=y
+#CONFIG_PACKAGE_luci-proto-ipv6=y
+#CONFIG_PACKAGE_ip6tables-mod-nat=y
+#CONFIG_PACKAGE_kmod-nf-ipt6=y
+#CONFIG_PACKAGE_odhcp6c=y
+#CONFIG_PACKAGE_odhcpd-ipv6only=y
+#EOF
 
 
 #先去掉这些 添加这是会导致lan没有网络 不知道什么原因
