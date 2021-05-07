@@ -86,10 +86,13 @@ EOF
 
 cat >> .config <<EOF
 CONFIG_PACKAGE_luci-app-openclash=m
-CONFIG_PACKAGE_luci-app-vssr=y
+CONFIG_PACKAGE_luci-app-ssr-plus=y
 CONFIG_PACKAGE_luci-app-vlmcsd=m
 CONFIG_PACKAGE_luci-app-qosv4=y
 EOF
+#编译一个ssr-plus版本
+#CONFIG_PACKAGE_luci-app-vssr=y
+#CONFIG_PACKAGE_luci-app-ssr-plus=y
 
 cat >> .config <<EOF
 CONFIG_PACKAGE_luci-app-samba=m
