@@ -14,13 +14,13 @@ cat >> .config<<EOF
 #CONFIG_IPV6 is not set
 EOF
 
-#路由器多网融合
-CONFIG_PACKAGE_luci-app-acme=y
-CONFIG_PACKAGE_luci-app-iptvhelper=y
-CONFIG_PACKAGE_luci-app-mwan3=y
-CONFIG_PACKAGE_luci-app-omcproxy=y
-CONFIG_PACKAGE_luci-app-sqm=y
-CONFIG_PACKAGE_acme-dnsapi=y
+#路由器多网融合好像要加东西什么的
+#CONFIG_PACKAGE_luci-app-acme=y
+#CONFIG_PACKAGE_luci-app-iptvhelper=y
+#CONFIG_PACKAGE_luci-app-mwan3=y
+#CONFIG_PACKAGE_luci-app-omcproxy=y
+#CONFIG_PACKAGE_luci-app-sqm=y
+#CONFIG_PACKAGE_acme-dnsapi=y
 
 # 启用 IPV6 提示缺少nat然后没有网络
 #cat >> .config <<EOF 
